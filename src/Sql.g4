@@ -69,15 +69,13 @@ key:
     |'KEY'
     ;
 
-primaryKey:primary key;
-uniqueKey:unique key;
 indexKey:'index'|'INDEX';
 
-defaultValue: ('default'|'DEFAULT') STRING|INT|Float ;
+defaultValue: ('default'|'DEFAULT') (STRING|INT|Float|ID) ;
 comment: ('COMMENT'|'comment') STRING;
 
 property:
-    primaryKey
+    primary
     |autoIncrement
     |unsigned
     |defaultValue
@@ -99,15 +97,16 @@ statement:
     createTable '('
     fieldDefine*
     index*
- ')' options* ':;'?
+    other_stat*
+ ')' options* ';'?
 ;
 
 options:
 ID '=' (STRING|ID|INT)
 |ID;
 
-keyType:primaryKey|uniqueKey|key|indexKey;
+keyType:(primary|unique|indexKey) key?;
 keyName:fieldName;
 index:keyType keyName? '(' fieldName (',' fieldName)* ID? ')' id? ','?;
-
+other_stat: (ID|keyType)* '(' fieldName (',' fieldName)* ')' id? ','?;
 init:statement*;
