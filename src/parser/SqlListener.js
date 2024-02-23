@@ -104,24 +104,6 @@ export default class SqlListener extends antlr4.tree.ParseTreeListener {
 	}
 
 
-	// Enter a parse tree produced by SqlParser#primaryKey.
-	enterPrimaryKey(ctx) {
-	}
-
-	// Exit a parse tree produced by SqlParser#primaryKey.
-	exitPrimaryKey(ctx) {
-	}
-
-
-	// Enter a parse tree produced by SqlParser#uniqueKey.
-	enterUniqueKey(ctx) {
-	}
-
-	// Exit a parse tree produced by SqlParser#uniqueKey.
-	exitUniqueKey(ctx) {
-	}
-
-
 	// Enter a parse tree produced by SqlParser#indexKey.
 	enterIndexKey(ctx) {
 	}
@@ -272,6 +254,15 @@ export default class SqlListener extends antlr4.tree.ParseTreeListener {
 
 	// Exit a parse tree produced by SqlParser#index.
 	exitIndex(ctx) {
+	}
+
+
+	// Enter a parse tree produced by SqlParser#other_stat.
+	enterOther_stat(ctx) {
+	}
+
+	// Exit a parse tree produced by SqlParser#other_stat.
+	exitOther_stat(ctx) {
 	}
 
 

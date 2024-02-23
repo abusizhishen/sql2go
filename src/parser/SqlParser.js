@@ -2,82 +2,90 @@
 // jshint ignore: start
 import antlr4 from 'antlr4';
 import SqlListener from './SqlListener.js';
-const serializedATN = [4,1,41,244,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,
+const serializedATN = [4,1,41,266,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,
 4,2,5,7,5,2,6,7,6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,
 2,13,7,13,2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,
 20,7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,2,27,
-7,27,2,28,7,28,2,29,7,29,2,30,7,30,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,3,
-0,72,8,0,1,1,1,1,1,2,1,2,3,2,78,8,2,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,3,3,3,
-88,8,3,1,4,1,4,1,4,1,4,3,4,94,8,4,1,4,1,4,1,5,1,5,1,6,1,6,3,6,102,8,6,1,
-7,1,7,1,8,1,8,1,9,1,9,1,10,1,10,1,11,1,11,1,11,1,12,1,12,1,12,1,13,1,13,
-1,14,1,14,1,14,1,14,3,14,124,8,14,1,15,1,15,1,15,1,16,1,16,1,16,1,16,1,16,
-1,16,3,16,135,8,16,1,17,1,17,1,17,5,17,140,8,17,10,17,12,17,143,9,17,1,17,
-3,17,146,8,17,1,17,3,17,149,8,17,1,18,1,18,1,19,1,19,1,20,1,20,1,21,1,21,
-1,22,1,22,1,23,1,23,1,23,1,23,1,24,1,24,1,24,3,24,168,8,24,1,24,1,24,1,24,
-3,24,173,8,24,1,24,1,24,1,25,1,25,1,25,5,25,180,8,25,10,25,12,25,183,9,25,
-1,25,5,25,186,8,25,10,25,12,25,189,9,25,1,25,1,25,5,25,193,8,25,10,25,12,
-25,196,9,25,1,25,3,25,199,8,25,1,26,1,26,1,26,1,26,3,26,205,8,26,1,27,1,
-27,1,27,1,27,3,27,211,8,27,1,28,1,28,1,29,1,29,3,29,217,8,29,1,29,1,29,1,
-29,1,29,5,29,223,8,29,10,29,12,29,226,9,29,1,29,3,29,229,8,29,1,29,1,29,
-3,29,233,8,29,1,29,3,29,236,8,29,1,30,5,30,239,8,30,10,30,12,30,242,9,30,
-1,30,0,0,31,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,
-44,46,48,50,52,54,56,58,60,0,13,1,0,11,12,1,0,14,15,1,0,16,17,1,0,18,19,
-1,0,20,21,1,0,22,23,1,0,24,25,1,0,26,27,1,0,28,29,1,0,30,31,2,0,3,3,6,6,
-1,0,32,33,2,0,38,39,41,41,246,0,71,1,0,0,0,2,73,1,0,0,0,4,77,1,0,0,0,6,87,
-1,0,0,0,8,89,1,0,0,0,10,97,1,0,0,0,12,99,1,0,0,0,14,103,1,0,0,0,16,105,1,
-0,0,0,18,107,1,0,0,0,20,109,1,0,0,0,22,111,1,0,0,0,24,114,1,0,0,0,26,117,
-1,0,0,0,28,123,1,0,0,0,30,125,1,0,0,0,32,134,1,0,0,0,34,136,1,0,0,0,36,150,
-1,0,0,0,38,152,1,0,0,0,40,154,1,0,0,0,42,156,1,0,0,0,44,158,1,0,0,0,46,160,
-1,0,0,0,48,164,1,0,0,0,50,176,1,0,0,0,52,204,1,0,0,0,54,210,1,0,0,0,56,212,
-1,0,0,0,58,214,1,0,0,0,60,240,1,0,0,0,62,63,5,1,0,0,63,64,3,2,1,0,64,65,
-5,1,0,0,65,72,1,0,0,0,66,67,5,2,0,0,67,68,3,2,1,0,68,69,5,2,0,0,69,72,1,
-0,0,0,70,72,3,2,1,0,71,62,1,0,0,0,71,66,1,0,0,0,71,70,1,0,0,0,72,1,1,0,0,
-0,73,74,5,41,0,0,74,3,1,0,0,0,75,78,1,0,0,0,76,78,5,41,0,0,77,75,1,0,0,0,
-77,76,1,0,0,0,78,5,1,0,0,0,79,80,5,3,0,0,80,88,5,4,0,0,81,82,5,3,0,0,82,
-88,5,5,0,0,83,84,5,6,0,0,84,88,5,7,0,0,85,86,5,6,0,0,86,88,5,5,0,0,87,79,
-1,0,0,0,87,81,1,0,0,0,87,83,1,0,0,0,87,85,1,0,0,0,88,7,1,0,0,0,89,90,5,8,
-0,0,90,93,5,39,0,0,91,92,5,9,0,0,92,94,5,39,0,0,93,91,1,0,0,0,93,94,1,0,
-0,0,94,95,1,0,0,0,95,96,5,10,0,0,96,9,1,0,0,0,97,98,7,0,0,0,98,11,1,0,0,
-0,99,101,3,2,1,0,100,102,3,8,4,0,101,100,1,0,0,0,101,102,1,0,0,0,102,13,
-1,0,0,0,103,104,5,13,0,0,104,15,1,0,0,0,105,106,7,1,0,0,106,17,1,0,0,0,107,
-108,7,2,0,0,108,19,1,0,0,0,109,110,7,3,0,0,110,21,1,0,0,0,111,112,3,16,8,
-0,112,113,3,20,10,0,113,23,1,0,0,0,114,115,3,18,9,0,115,116,3,20,10,0,116,
-25,1,0,0,0,117,118,7,4,0,0,118,27,1,0,0,0,119,120,7,5,0,0,120,124,5,38,0,
-0,121,124,5,39,0,0,122,124,5,40,0,0,123,119,1,0,0,0,123,121,1,0,0,0,123,
-122,1,0,0,0,124,29,1,0,0,0,125,126,7,6,0,0,126,127,5,38,0,0,127,31,1,0,0,
-0,128,135,3,22,11,0,129,135,3,14,7,0,130,135,3,10,5,0,131,135,3,28,14,0,
-132,135,3,6,3,0,133,135,3,2,1,0,134,128,1,0,0,0,134,129,1,0,0,0,134,130,
-1,0,0,0,134,131,1,0,0,0,134,132,1,0,0,0,134,133,1,0,0,0,135,33,1,0,0,0,136,
-137,3,0,0,0,137,141,3,12,6,0,138,140,3,32,16,0,139,138,1,0,0,0,140,143,1,
-0,0,0,141,139,1,0,0,0,141,142,1,0,0,0,142,145,1,0,0,0,143,141,1,0,0,0,144,
-146,3,30,15,0,145,144,1,0,0,0,145,146,1,0,0,0,146,148,1,0,0,0,147,149,5,
-9,0,0,148,147,1,0,0,0,148,149,1,0,0,0,149,35,1,0,0,0,150,151,7,7,0,0,151,
-37,1,0,0,0,152,153,7,8,0,0,153,39,1,0,0,0,154,155,7,9,0,0,155,41,1,0,0,0,
-156,157,7,10,0,0,157,43,1,0,0,0,158,159,7,11,0,0,159,45,1,0,0,0,160,161,
-3,40,20,0,161,162,3,42,21,0,162,163,3,44,22,0,163,47,1,0,0,0,164,165,3,36,
-18,0,165,167,3,38,19,0,166,168,3,46,23,0,167,166,1,0,0,0,167,168,1,0,0,0,
-168,172,1,0,0,0,169,170,3,0,0,0,170,171,5,34,0,0,171,173,1,0,0,0,172,169,
-1,0,0,0,172,173,1,0,0,0,173,174,1,0,0,0,174,175,3,0,0,0,175,49,1,0,0,0,176,
-177,3,48,24,0,177,181,5,8,0,0,178,180,3,34,17,0,179,178,1,0,0,0,180,183,
-1,0,0,0,181,179,1,0,0,0,181,182,1,0,0,0,182,187,1,0,0,0,183,181,1,0,0,0,
-184,186,3,58,29,0,185,184,1,0,0,0,186,189,1,0,0,0,187,185,1,0,0,0,187,188,
-1,0,0,0,188,190,1,0,0,0,189,187,1,0,0,0,190,194,5,10,0,0,191,193,3,52,26,
-0,192,191,1,0,0,0,193,196,1,0,0,0,194,192,1,0,0,0,194,195,1,0,0,0,195,198,
-1,0,0,0,196,194,1,0,0,0,197,199,5,35,0,0,198,197,1,0,0,0,198,199,1,0,0,0,
-199,51,1,0,0,0,200,201,5,41,0,0,201,202,5,36,0,0,202,205,7,12,0,0,203,205,
-5,41,0,0,204,200,1,0,0,0,204,203,1,0,0,0,205,53,1,0,0,0,206,211,3,22,11,
-0,207,211,3,24,12,0,208,211,3,20,10,0,209,211,3,26,13,0,210,206,1,0,0,0,
-210,207,1,0,0,0,210,208,1,0,0,0,210,209,1,0,0,0,211,55,1,0,0,0,212,213,3,
-0,0,0,213,57,1,0,0,0,214,216,3,54,27,0,215,217,3,56,28,0,216,215,1,0,0,0,
-216,217,1,0,0,0,217,218,1,0,0,0,218,219,5,8,0,0,219,224,3,0,0,0,220,221,
-5,9,0,0,221,223,3,0,0,0,222,220,1,0,0,0,223,226,1,0,0,0,224,222,1,0,0,0,
-224,225,1,0,0,0,225,228,1,0,0,0,226,224,1,0,0,0,227,229,5,41,0,0,228,227,
-1,0,0,0,228,229,1,0,0,0,229,230,1,0,0,0,230,232,5,10,0,0,231,233,3,2,1,0,
-232,231,1,0,0,0,232,233,1,0,0,0,233,235,1,0,0,0,234,236,5,9,0,0,235,234,
-1,0,0,0,235,236,1,0,0,0,236,59,1,0,0,0,237,239,3,50,25,0,238,237,1,0,0,0,
-239,242,1,0,0,0,240,238,1,0,0,0,240,241,1,0,0,0,241,61,1,0,0,0,242,240,1,
-0,0,0,24,71,77,87,93,101,123,134,141,145,148,167,172,181,187,194,198,204,
-210,216,224,228,232,235,240];
+7,27,2,28,7,28,2,29,7,29,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,3,0,70,8,0,
+1,1,1,1,1,2,1,2,3,2,76,8,2,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,3,3,3,86,8,3,1,
+4,1,4,1,4,1,4,3,4,92,8,4,1,4,1,4,1,5,1,5,1,6,1,6,3,6,100,8,6,1,7,1,7,1,8,
+1,8,1,9,1,9,1,10,1,10,1,11,1,11,1,12,1,12,1,12,1,13,1,13,1,13,1,14,1,14,
+1,14,1,14,1,14,1,14,3,14,124,8,14,1,15,1,15,1,15,5,15,129,8,15,10,15,12,
+15,132,9,15,1,15,3,15,135,8,15,1,15,3,15,138,8,15,1,16,1,16,1,17,1,17,1,
+18,1,18,1,19,1,19,1,20,1,20,1,21,1,21,1,21,1,21,1,22,1,22,1,22,3,22,157,
+8,22,1,22,1,22,1,22,3,22,162,8,22,1,22,1,22,1,23,1,23,1,23,5,23,169,8,23,
+10,23,12,23,172,9,23,1,23,5,23,175,8,23,10,23,12,23,178,9,23,1,23,5,23,181,
+8,23,10,23,12,23,184,9,23,1,23,1,23,5,23,188,8,23,10,23,12,23,191,9,23,1,
+23,3,23,194,8,23,1,24,1,24,1,24,1,24,3,24,200,8,24,1,25,1,25,1,25,3,25,205,
+8,25,1,25,3,25,208,8,25,1,26,1,26,1,27,5,27,213,8,27,10,27,12,27,216,9,27,
+1,27,1,27,1,27,1,27,5,27,222,8,27,10,27,12,27,225,9,27,1,27,3,27,228,8,27,
+1,27,1,27,3,27,232,8,27,1,27,3,27,235,8,27,1,28,1,28,5,28,239,8,28,10,28,
+12,28,242,9,28,1,28,1,28,1,28,1,28,5,28,248,8,28,10,28,12,28,251,9,28,1,
+28,1,28,3,28,255,8,28,1,28,3,28,258,8,28,1,29,5,29,261,8,29,10,29,12,29,
+264,9,29,1,29,0,0,30,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,
+38,40,42,44,46,48,50,52,54,56,58,0,14,1,0,11,12,1,0,14,15,1,0,16,17,1,0,
+18,19,1,0,20,21,1,0,22,23,1,0,38,41,1,0,24,25,1,0,26,27,1,0,28,29,1,0,30,
+31,2,0,3,3,6,6,1,0,32,33,2,0,38,39,41,41,273,0,69,1,0,0,0,2,71,1,0,0,0,4,
+75,1,0,0,0,6,85,1,0,0,0,8,87,1,0,0,0,10,95,1,0,0,0,12,97,1,0,0,0,14,101,
+1,0,0,0,16,103,1,0,0,0,18,105,1,0,0,0,20,107,1,0,0,0,22,109,1,0,0,0,24,111,
+1,0,0,0,26,114,1,0,0,0,28,123,1,0,0,0,30,125,1,0,0,0,32,139,1,0,0,0,34,141,
+1,0,0,0,36,143,1,0,0,0,38,145,1,0,0,0,40,147,1,0,0,0,42,149,1,0,0,0,44,153,
+1,0,0,0,46,165,1,0,0,0,48,199,1,0,0,0,50,204,1,0,0,0,52,209,1,0,0,0,54,214,
+1,0,0,0,56,240,1,0,0,0,58,262,1,0,0,0,60,61,5,1,0,0,61,62,3,2,1,0,62,63,
+5,1,0,0,63,70,1,0,0,0,64,65,5,2,0,0,65,66,3,2,1,0,66,67,5,2,0,0,67,70,1,
+0,0,0,68,70,3,2,1,0,69,60,1,0,0,0,69,64,1,0,0,0,69,68,1,0,0,0,70,1,1,0,0,
+0,71,72,5,41,0,0,72,3,1,0,0,0,73,76,1,0,0,0,74,76,5,41,0,0,75,73,1,0,0,0,
+75,74,1,0,0,0,76,5,1,0,0,0,77,78,5,3,0,0,78,86,5,4,0,0,79,80,5,3,0,0,80,
+86,5,5,0,0,81,82,5,6,0,0,82,86,5,7,0,0,83,84,5,6,0,0,84,86,5,5,0,0,85,77,
+1,0,0,0,85,79,1,0,0,0,85,81,1,0,0,0,85,83,1,0,0,0,86,7,1,0,0,0,87,88,5,8,
+0,0,88,91,5,39,0,0,89,90,5,9,0,0,90,92,5,39,0,0,91,89,1,0,0,0,91,92,1,0,
+0,0,92,93,1,0,0,0,93,94,5,10,0,0,94,9,1,0,0,0,95,96,7,0,0,0,96,11,1,0,0,
+0,97,99,3,2,1,0,98,100,3,8,4,0,99,98,1,0,0,0,99,100,1,0,0,0,100,13,1,0,0,
+0,101,102,5,13,0,0,102,15,1,0,0,0,103,104,7,1,0,0,104,17,1,0,0,0,105,106,
+7,2,0,0,106,19,1,0,0,0,107,108,7,3,0,0,108,21,1,0,0,0,109,110,7,4,0,0,110,
+23,1,0,0,0,111,112,7,5,0,0,112,113,7,6,0,0,113,25,1,0,0,0,114,115,7,7,0,
+0,115,116,5,38,0,0,116,27,1,0,0,0,117,124,3,16,8,0,118,124,3,14,7,0,119,
+124,3,10,5,0,120,124,3,24,12,0,121,124,3,6,3,0,122,124,3,2,1,0,123,117,1,
+0,0,0,123,118,1,0,0,0,123,119,1,0,0,0,123,120,1,0,0,0,123,121,1,0,0,0,123,
+122,1,0,0,0,124,29,1,0,0,0,125,126,3,0,0,0,126,130,3,12,6,0,127,129,3,28,
+14,0,128,127,1,0,0,0,129,132,1,0,0,0,130,128,1,0,0,0,130,131,1,0,0,0,131,
+134,1,0,0,0,132,130,1,0,0,0,133,135,3,26,13,0,134,133,1,0,0,0,134,135,1,
+0,0,0,135,137,1,0,0,0,136,138,5,9,0,0,137,136,1,0,0,0,137,138,1,0,0,0,138,
+31,1,0,0,0,139,140,7,8,0,0,140,33,1,0,0,0,141,142,7,9,0,0,142,35,1,0,0,0,
+143,144,7,10,0,0,144,37,1,0,0,0,145,146,7,11,0,0,146,39,1,0,0,0,147,148,
+7,12,0,0,148,41,1,0,0,0,149,150,3,36,18,0,150,151,3,38,19,0,151,152,3,40,
+20,0,152,43,1,0,0,0,153,154,3,32,16,0,154,156,3,34,17,0,155,157,3,42,21,
+0,156,155,1,0,0,0,156,157,1,0,0,0,157,161,1,0,0,0,158,159,3,0,0,0,159,160,
+5,34,0,0,160,162,1,0,0,0,161,158,1,0,0,0,161,162,1,0,0,0,162,163,1,0,0,0,
+163,164,3,0,0,0,164,45,1,0,0,0,165,166,3,44,22,0,166,170,5,8,0,0,167,169,
+3,30,15,0,168,167,1,0,0,0,169,172,1,0,0,0,170,168,1,0,0,0,170,171,1,0,0,
+0,171,176,1,0,0,0,172,170,1,0,0,0,173,175,3,54,27,0,174,173,1,0,0,0,175,
+178,1,0,0,0,176,174,1,0,0,0,176,177,1,0,0,0,177,182,1,0,0,0,178,176,1,0,
+0,0,179,181,3,56,28,0,180,179,1,0,0,0,181,184,1,0,0,0,182,180,1,0,0,0,182,
+183,1,0,0,0,183,185,1,0,0,0,184,182,1,0,0,0,185,189,5,10,0,0,186,188,3,48,
+24,0,187,186,1,0,0,0,188,191,1,0,0,0,189,187,1,0,0,0,189,190,1,0,0,0,190,
+193,1,0,0,0,191,189,1,0,0,0,192,194,5,35,0,0,193,192,1,0,0,0,193,194,1,0,
+0,0,194,47,1,0,0,0,195,196,5,41,0,0,196,197,5,36,0,0,197,200,7,13,0,0,198,
+200,5,41,0,0,199,195,1,0,0,0,199,198,1,0,0,0,200,49,1,0,0,0,201,205,3,16,
+8,0,202,205,3,18,9,0,203,205,3,22,11,0,204,201,1,0,0,0,204,202,1,0,0,0,204,
+203,1,0,0,0,205,207,1,0,0,0,206,208,3,20,10,0,207,206,1,0,0,0,207,208,1,
+0,0,0,208,51,1,0,0,0,209,210,3,0,0,0,210,53,1,0,0,0,211,213,3,2,1,0,212,
+211,1,0,0,0,213,216,1,0,0,0,214,212,1,0,0,0,214,215,1,0,0,0,215,217,1,0,
+0,0,216,214,1,0,0,0,217,218,5,8,0,0,218,223,3,0,0,0,219,220,5,9,0,0,220,
+222,3,0,0,0,221,219,1,0,0,0,222,225,1,0,0,0,223,221,1,0,0,0,223,224,1,0,
+0,0,224,227,1,0,0,0,225,223,1,0,0,0,226,228,5,41,0,0,227,226,1,0,0,0,227,
+228,1,0,0,0,228,229,1,0,0,0,229,231,5,10,0,0,230,232,3,2,1,0,231,230,1,0,
+0,0,231,232,1,0,0,0,232,234,1,0,0,0,233,235,5,9,0,0,234,233,1,0,0,0,234,
+235,1,0,0,0,235,55,1,0,0,0,236,239,5,41,0,0,237,239,3,50,25,0,238,236,1,
+0,0,0,238,237,1,0,0,0,239,242,1,0,0,0,240,238,1,0,0,0,240,241,1,0,0,0,241,
+243,1,0,0,0,242,240,1,0,0,0,243,244,5,8,0,0,244,249,3,0,0,0,245,246,5,9,
+0,0,246,248,3,0,0,0,247,245,1,0,0,0,248,251,1,0,0,0,249,247,1,0,0,0,249,
+250,1,0,0,0,250,252,1,0,0,0,251,249,1,0,0,0,252,254,5,10,0,0,253,255,3,2,
+1,0,254,253,1,0,0,0,254,255,1,0,0,0,255,257,1,0,0,0,256,258,5,9,0,0,257,
+256,1,0,0,0,257,258,1,0,0,0,258,57,1,0,0,0,259,261,3,46,23,0,260,259,1,0,
+0,0,261,264,1,0,0,0,262,260,1,0,0,0,262,263,1,0,0,0,263,59,1,0,0,0,264,262,
+1,0,0,0,30,69,75,85,91,99,123,130,134,137,156,161,170,176,182,189,193,199,
+204,207,214,223,227,231,234,238,240,249,254,257,262];
 
 
 const atn = new antlr4.atn.ATNDeserializer().deserialize(serializedATN);
@@ -96,7 +104,7 @@ export default class SqlParser extends antlr4.Parser {
                             "'KEY'", "'index'", "'INDEX'", "'default'", 
                             "'DEFAULT'", "'COMMENT'", "'comment'", "'create'", 
                             "'CREATE'", "'table'", "'TABLE'", "'if'", "'IF'", 
-                            "'exists'", "'EXISTS'", "'.'", "':;'", "'='" ];
+                            "'exists'", "'EXISTS'", "'.'", "';'", "'='" ];
     static symbolicNames = [ null, null, null, null, null, null, null, null, 
                              null, null, null, null, null, null, null, null, 
                              null, null, null, null, null, null, null, null, 
@@ -105,11 +113,11 @@ export default class SqlParser extends antlr4.Parser {
                              "INT", "Float", "ID" ];
     static ruleNames = [ "fieldName", "id", "value", "notNUll", "size", 
                          "unsigned", "typeRange", "autoIncrement", "primary", 
-                         "unique", "key", "primaryKey", "uniqueKey", "indexKey", 
-                         "defaultValue", "comment", "property", "fieldDefine", 
-                         "create", "table", "iff", "not", "exists", "ifNotExists", 
-                         "createTable", "statement", "options", "keyType", 
-                         "keyName", "index", "init" ];
+                         "unique", "key", "indexKey", "defaultValue", "comment", 
+                         "property", "fieldDefine", "create", "table", "iff", 
+                         "not", "exists", "ifNotExists", "createTable", 
+                         "statement", "options", "keyType", "keyName", "index", 
+                         "other_stat", "init" ];
 
     constructor(input) {
         super(input);
@@ -125,30 +133,30 @@ export default class SqlParser extends antlr4.Parser {
 	    let localctx = new FieldNameContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 0, SqlParser.RULE_fieldName);
 	    try {
-	        this.state = 71;
+	        this.state = 69;
 	        this._errHandler.sync(this);
 	        switch(this._input.LA(1)) {
 	        case 1:
 	            this.enterOuterAlt(localctx, 1);
-	            this.state = 62;
+	            this.state = 60;
 	            this.match(SqlParser.T__0);
-	            this.state = 63;
+	            this.state = 61;
 	            this.id();
-	            this.state = 64;
+	            this.state = 62;
 	            this.match(SqlParser.T__0);
 	            break;
 	        case 2:
 	            this.enterOuterAlt(localctx, 2);
-	            this.state = 66;
+	            this.state = 64;
 	            this.match(SqlParser.T__1);
-	            this.state = 67;
+	            this.state = 65;
 	            this.id();
-	            this.state = 68;
+	            this.state = 66;
 	            this.match(SqlParser.T__1);
 	            break;
 	        case 41:
 	            this.enterOuterAlt(localctx, 3);
-	            this.state = 70;
+	            this.state = 68;
 	            this.id();
 	            break;
 	        default:
@@ -175,7 +183,7 @@ export default class SqlParser extends antlr4.Parser {
 	    this.enterRule(localctx, 2, SqlParser.RULE_id);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 73;
+	        this.state = 71;
 	        this.match(SqlParser.ID);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -197,7 +205,7 @@ export default class SqlParser extends antlr4.Parser {
 	    let localctx = new ValueContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 4, SqlParser.RULE_value);
 	    try {
-	        this.state = 77;
+	        this.state = 75;
 	        this._errHandler.sync(this);
 	        switch(this._input.LA(1)) {
 	        case -1:
@@ -206,7 +214,7 @@ export default class SqlParser extends antlr4.Parser {
 	            break;
 	        case 41:
 	            this.enterOuterAlt(localctx, 2);
-	            this.state = 76;
+	            this.state = 74;
 	            this.match(SqlParser.ID);
 	            break;
 	        default:
@@ -232,39 +240,39 @@ export default class SqlParser extends antlr4.Parser {
 	    let localctx = new NotNUllContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 6, SqlParser.RULE_notNUll);
 	    try {
-	        this.state = 87;
+	        this.state = 85;
 	        this._errHandler.sync(this);
 	        var la_ = this._interp.adaptivePredict(this._input,2,this._ctx);
 	        switch(la_) {
 	        case 1:
 	            this.enterOuterAlt(localctx, 1);
-	            this.state = 79;
+	            this.state = 77;
 	            this.match(SqlParser.T__2);
-	            this.state = 80;
+	            this.state = 78;
 	            this.match(SqlParser.T__3);
 	            break;
 
 	        case 2:
 	            this.enterOuterAlt(localctx, 2);
-	            this.state = 81;
+	            this.state = 79;
 	            this.match(SqlParser.T__2);
-	            this.state = 82;
+	            this.state = 80;
 	            this.match(SqlParser.T__4);
 	            break;
 
 	        case 3:
 	            this.enterOuterAlt(localctx, 3);
-	            this.state = 83;
+	            this.state = 81;
 	            this.match(SqlParser.T__5);
-	            this.state = 84;
+	            this.state = 82;
 	            this.match(SqlParser.T__6);
 	            break;
 
 	        case 4:
 	            this.enterOuterAlt(localctx, 4);
-	            this.state = 85;
+	            this.state = 83;
 	            this.match(SqlParser.T__5);
-	            this.state = 86;
+	            this.state = 84;
 	            this.match(SqlParser.T__4);
 	            break;
 
@@ -291,21 +299,21 @@ export default class SqlParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 89;
+	        this.state = 87;
 	        this.match(SqlParser.T__7);
-	        this.state = 90;
+	        this.state = 88;
 	        this.match(SqlParser.INT);
-	        this.state = 93;
+	        this.state = 91;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        if(_la===9) {
-	            this.state = 91;
+	            this.state = 89;
 	            this.match(SqlParser.T__8);
-	            this.state = 92;
+	            this.state = 90;
 	            this.match(SqlParser.INT);
 	        }
 
-	        this.state = 95;
+	        this.state = 93;
 	        this.match(SqlParser.T__9);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -329,7 +337,7 @@ export default class SqlParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 97;
+	        this.state = 95;
 	        _la = this._input.LA(1);
 	        if(!(_la===11 || _la===12)) {
 	        this._errHandler.recoverInline(this);
@@ -357,19 +365,18 @@ export default class SqlParser extends antlr4.Parser {
 	typeRange() {
 	    let localctx = new TypeRangeContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 12, SqlParser.RULE_typeRange);
-	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 99;
+	        this.state = 97;
 	        this.id();
-	        this.state = 101;
+	        this.state = 99;
 	        this._errHandler.sync(this);
-	        _la = this._input.LA(1);
-	        if(_la===8) {
-	            this.state = 100;
+	        var la_ = this._interp.adaptivePredict(this._input,4,this._ctx);
+	        if(la_===1) {
+	            this.state = 98;
 	            this.size();
-	        }
 
+	        }
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
 		        localctx.exception = re;
@@ -391,7 +398,7 @@ export default class SqlParser extends antlr4.Parser {
 	    this.enterRule(localctx, 14, SqlParser.RULE_autoIncrement);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 103;
+	        this.state = 101;
 	        this.match(SqlParser.T__12);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -415,7 +422,7 @@ export default class SqlParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 105;
+	        this.state = 103;
 	        _la = this._input.LA(1);
 	        if(!(_la===14 || _la===15)) {
 	        this._errHandler.recoverInline(this);
@@ -446,7 +453,7 @@ export default class SqlParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 107;
+	        this.state = 105;
 	        _la = this._input.LA(1);
 	        if(!(_la===16 || _la===17)) {
 	        this._errHandler.recoverInline(this);
@@ -477,7 +484,7 @@ export default class SqlParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 109;
+	        this.state = 107;
 	        _la = this._input.LA(1);
 	        if(!(_la===18 || _la===19)) {
 	        this._errHandler.recoverInline(this);
@@ -502,63 +509,13 @@ export default class SqlParser extends antlr4.Parser {
 
 
 
-	primaryKey() {
-	    let localctx = new PrimaryKeyContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 22, SqlParser.RULE_primaryKey);
-	    try {
-	        this.enterOuterAlt(localctx, 1);
-	        this.state = 111;
-	        this.primary();
-	        this.state = 112;
-	        this.key();
-	    } catch (re) {
-	    	if(re instanceof antlr4.error.RecognitionException) {
-		        localctx.exception = re;
-		        this._errHandler.reportError(this, re);
-		        this._errHandler.recover(this, re);
-		    } else {
-		    	throw re;
-		    }
-	    } finally {
-	        this.exitRule();
-	    }
-	    return localctx;
-	}
-
-
-
-	uniqueKey() {
-	    let localctx = new UniqueKeyContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 24, SqlParser.RULE_uniqueKey);
-	    try {
-	        this.enterOuterAlt(localctx, 1);
-	        this.state = 114;
-	        this.unique();
-	        this.state = 115;
-	        this.key();
-	    } catch (re) {
-	    	if(re instanceof antlr4.error.RecognitionException) {
-		        localctx.exception = re;
-		        this._errHandler.reportError(this, re);
-		        this._errHandler.recover(this, re);
-		    } else {
-		    	throw re;
-		    }
-	    } finally {
-	        this.exitRule();
-	    }
-	    return localctx;
-	}
-
-
-
 	indexKey() {
 	    let localctx = new IndexKeyContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 26, SqlParser.RULE_indexKey);
+	    this.enterRule(localctx, 22, SqlParser.RULE_indexKey);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 117;
+	        this.state = 109;
 	        _la = this._input.LA(1);
 	        if(!(_la===20 || _la===21)) {
 	        this._errHandler.recoverInline(this);
@@ -585,39 +542,27 @@ export default class SqlParser extends antlr4.Parser {
 
 	defaultValue() {
 	    let localctx = new DefaultValueContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 28, SqlParser.RULE_defaultValue);
+	    this.enterRule(localctx, 24, SqlParser.RULE_defaultValue);
 	    var _la = 0;
 	    try {
-	        this.state = 123;
-	        this._errHandler.sync(this);
-	        switch(this._input.LA(1)) {
-	        case 22:
-	        case 23:
-	            this.enterOuterAlt(localctx, 1);
-	            this.state = 119;
-	            _la = this._input.LA(1);
-	            if(!(_la===22 || _la===23)) {
-	            this._errHandler.recoverInline(this);
-	            }
-	            else {
-	            	this._errHandler.reportMatch(this);
-	                this.consume();
-	            }
-	            this.state = 120;
-	            this.match(SqlParser.STRING);
-	            break;
-	        case 39:
-	            this.enterOuterAlt(localctx, 2);
-	            this.state = 121;
-	            this.match(SqlParser.INT);
-	            break;
-	        case 40:
-	            this.enterOuterAlt(localctx, 3);
-	            this.state = 122;
-	            this.match(SqlParser.Float);
-	            break;
-	        default:
-	            throw new antlr4.error.NoViableAltException(this);
+	        this.enterOuterAlt(localctx, 1);
+	        this.state = 111;
+	        _la = this._input.LA(1);
+	        if(!(_la===22 || _la===23)) {
+	        this._errHandler.recoverInline(this);
+	        }
+	        else {
+	        	this._errHandler.reportMatch(this);
+	            this.consume();
+	        }
+	        this.state = 112;
+	        _la = this._input.LA(1);
+	        if(!(((((_la - 38)) & ~0x1f) === 0 && ((1 << (_la - 38)) & 15) !== 0))) {
+	        this._errHandler.recoverInline(this);
+	        }
+	        else {
+	        	this._errHandler.reportMatch(this);
+	            this.consume();
 	        }
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -637,11 +582,11 @@ export default class SqlParser extends antlr4.Parser {
 
 	comment() {
 	    let localctx = new CommentContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 30, SqlParser.RULE_comment);
+	    this.enterRule(localctx, 26, SqlParser.RULE_comment);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 125;
+	        this.state = 114;
 	        _la = this._input.LA(1);
 	        if(!(_la===24 || _la===25)) {
 	        this._errHandler.recoverInline(this);
@@ -650,7 +595,7 @@ export default class SqlParser extends antlr4.Parser {
 	        	this._errHandler.reportMatch(this);
 	            this.consume();
 	        }
-	        this.state = 126;
+	        this.state = 115;
 	        this.match(SqlParser.STRING);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -670,45 +615,43 @@ export default class SqlParser extends antlr4.Parser {
 
 	property() {
 	    let localctx = new PropertyContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 32, SqlParser.RULE_property);
+	    this.enterRule(localctx, 28, SqlParser.RULE_property);
 	    try {
-	        this.state = 134;
+	        this.state = 123;
 	        this._errHandler.sync(this);
 	        switch(this._input.LA(1)) {
 	        case 14:
 	        case 15:
 	            this.enterOuterAlt(localctx, 1);
-	            this.state = 128;
-	            this.primaryKey();
+	            this.state = 117;
+	            this.primary();
 	            break;
 	        case 13:
 	            this.enterOuterAlt(localctx, 2);
-	            this.state = 129;
+	            this.state = 118;
 	            this.autoIncrement();
 	            break;
 	        case 11:
 	        case 12:
 	            this.enterOuterAlt(localctx, 3);
-	            this.state = 130;
+	            this.state = 119;
 	            this.unsigned();
 	            break;
 	        case 22:
 	        case 23:
-	        case 39:
-	        case 40:
 	            this.enterOuterAlt(localctx, 4);
-	            this.state = 131;
+	            this.state = 120;
 	            this.defaultValue();
 	            break;
 	        case 3:
 	        case 6:
 	            this.enterOuterAlt(localctx, 5);
-	            this.state = 132;
+	            this.state = 121;
 	            this.notNUll();
 	            break;
 	        case 41:
 	            this.enterOuterAlt(localctx, 6);
-	            this.state = 133;
+	            this.state = 122;
 	            this.id();
 	            break;
 	        default:
@@ -732,40 +675,40 @@ export default class SqlParser extends antlr4.Parser {
 
 	fieldDefine() {
 	    let localctx = new FieldDefineContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 34, SqlParser.RULE_fieldDefine);
+	    this.enterRule(localctx, 30, SqlParser.RULE_fieldDefine);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 136;
+	        this.state = 125;
 	        this.fieldName();
-	        this.state = 137;
+	        this.state = 126;
 	        this.typeRange();
-	        this.state = 141;
+	        this.state = 130;
 	        this._errHandler.sync(this);
-	        var _alt = this._interp.adaptivePredict(this._input,7,this._ctx)
+	        var _alt = this._interp.adaptivePredict(this._input,6,this._ctx)
 	        while(_alt!=2 && _alt!=antlr4.atn.ATN.INVALID_ALT_NUMBER) {
 	            if(_alt===1) {
-	                this.state = 138;
+	                this.state = 127;
 	                this.property(); 
 	            }
-	            this.state = 143;
+	            this.state = 132;
 	            this._errHandler.sync(this);
-	            _alt = this._interp.adaptivePredict(this._input,7,this._ctx);
+	            _alt = this._interp.adaptivePredict(this._input,6,this._ctx);
 	        }
 
-	        this.state = 145;
+	        this.state = 134;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        if(_la===24 || _la===25) {
-	            this.state = 144;
+	            this.state = 133;
 	            this.comment();
 	        }
 
-	        this.state = 148;
+	        this.state = 137;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        if(_la===9) {
-	            this.state = 147;
+	            this.state = 136;
 	            this.match(SqlParser.T__8);
 	        }
 
@@ -787,11 +730,11 @@ export default class SqlParser extends antlr4.Parser {
 
 	create() {
 	    let localctx = new CreateContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 36, SqlParser.RULE_create);
+	    this.enterRule(localctx, 32, SqlParser.RULE_create);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 150;
+	        this.state = 139;
 	        _la = this._input.LA(1);
 	        if(!(_la===26 || _la===27)) {
 	        this._errHandler.recoverInline(this);
@@ -818,11 +761,11 @@ export default class SqlParser extends antlr4.Parser {
 
 	table() {
 	    let localctx = new TableContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 38, SqlParser.RULE_table);
+	    this.enterRule(localctx, 34, SqlParser.RULE_table);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 152;
+	        this.state = 141;
 	        _la = this._input.LA(1);
 	        if(!(_la===28 || _la===29)) {
 	        this._errHandler.recoverInline(this);
@@ -849,11 +792,11 @@ export default class SqlParser extends antlr4.Parser {
 
 	iff() {
 	    let localctx = new IffContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 40, SqlParser.RULE_iff);
+	    this.enterRule(localctx, 36, SqlParser.RULE_iff);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 154;
+	        this.state = 143;
 	        _la = this._input.LA(1);
 	        if(!(_la===30 || _la===31)) {
 	        this._errHandler.recoverInline(this);
@@ -880,11 +823,11 @@ export default class SqlParser extends antlr4.Parser {
 
 	not() {
 	    let localctx = new NotContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 42, SqlParser.RULE_not);
+	    this.enterRule(localctx, 38, SqlParser.RULE_not);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 156;
+	        this.state = 145;
 	        _la = this._input.LA(1);
 	        if(!(_la===3 || _la===6)) {
 	        this._errHandler.recoverInline(this);
@@ -911,11 +854,11 @@ export default class SqlParser extends antlr4.Parser {
 
 	exists() {
 	    let localctx = new ExistsContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 44, SqlParser.RULE_exists);
+	    this.enterRule(localctx, 40, SqlParser.RULE_exists);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 158;
+	        this.state = 147;
 	        _la = this._input.LA(1);
 	        if(!(_la===32 || _la===33)) {
 	        this._errHandler.recoverInline(this);
@@ -942,14 +885,14 @@ export default class SqlParser extends antlr4.Parser {
 
 	ifNotExists() {
 	    let localctx = new IfNotExistsContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 46, SqlParser.RULE_ifNotExists);
+	    this.enterRule(localctx, 42, SqlParser.RULE_ifNotExists);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 160;
+	        this.state = 149;
 	        this.iff();
-	        this.state = 161;
+	        this.state = 150;
 	        this.not();
-	        this.state = 162;
+	        this.state = 151;
 	        this.exists();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -969,33 +912,33 @@ export default class SqlParser extends antlr4.Parser {
 
 	createTable() {
 	    let localctx = new CreateTableContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 48, SqlParser.RULE_createTable);
+	    this.enterRule(localctx, 44, SqlParser.RULE_createTable);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 164;
+	        this.state = 153;
 	        this.create();
-	        this.state = 165;
+	        this.state = 154;
 	        this.table();
-	        this.state = 167;
+	        this.state = 156;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        if(_la===30 || _la===31) {
-	            this.state = 166;
+	            this.state = 155;
 	            this.ifNotExists();
 	        }
 
-	        this.state = 172;
+	        this.state = 161;
 	        this._errHandler.sync(this);
-	        var la_ = this._interp.adaptivePredict(this._input,11,this._ctx);
+	        var la_ = this._interp.adaptivePredict(this._input,10,this._ctx);
 	        if(la_===1) {
-	            this.state = 169;
+	            this.state = 158;
 	            localctx.dbName = this.fieldName();
-	            this.state = 170;
+	            this.state = 159;
 	            this.match(SqlParser.T__33);
 
 	        }
-	        this.state = 174;
+	        this.state = 163;
 	        localctx.tableName = this.fieldName();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -1015,51 +958,67 @@ export default class SqlParser extends antlr4.Parser {
 
 	statement() {
 	    let localctx = new StatementContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 50, SqlParser.RULE_statement);
+	    this.enterRule(localctx, 46, SqlParser.RULE_statement);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 176;
+	        this.state = 165;
 	        this.createTable();
-	        this.state = 177;
+	        this.state = 166;
 	        this.match(SqlParser.T__7);
-	        this.state = 181;
+	        this.state = 170;
 	        this._errHandler.sync(this);
-	        _la = this._input.LA(1);
-	        while(_la===1 || _la===2 || _la===41) {
+	        var _alt = this._interp.adaptivePredict(this._input,11,this._ctx)
+	        while(_alt!=2 && _alt!=antlr4.atn.ATN.INVALID_ALT_NUMBER) {
+	            if(_alt===1) {
+	                this.state = 167;
+	                this.fieldDefine(); 
+	            }
+	            this.state = 172;
+	            this._errHandler.sync(this);
+	            _alt = this._interp.adaptivePredict(this._input,11,this._ctx);
+	        }
+
+	        this.state = 176;
+	        this._errHandler.sync(this);
+	        var _alt = this._interp.adaptivePredict(this._input,12,this._ctx)
+	        while(_alt!=2 && _alt!=antlr4.atn.ATN.INVALID_ALT_NUMBER) {
+	            if(_alt===1) {
+	                this.state = 173;
+	                this.index(); 
+	            }
 	            this.state = 178;
-	            this.fieldDefine();
-	            this.state = 183;
 	            this._errHandler.sync(this);
-	            _la = this._input.LA(1);
+	            _alt = this._interp.adaptivePredict(this._input,12,this._ctx);
 	        }
-	        this.state = 187;
+
+	        this.state = 182;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
-	        while((((_la) & ~0x1f) === 0 && ((1 << _la) & 4177920) !== 0)) {
+	        while((((_la) & ~0x1f) === 0 && ((1 << _la) & 3391744) !== 0) || _la===41) {
+	            this.state = 179;
+	            this.other_stat();
 	            this.state = 184;
-	            this.index();
-	            this.state = 189;
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
 	        }
-	        this.state = 190;
+	        this.state = 185;
 	        this.match(SqlParser.T__9);
-	        this.state = 194;
+	        this.state = 189;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        while(_la===41) {
-	            this.state = 191;
+	            this.state = 186;
 	            this.options();
-	            this.state = 196;
+	            this.state = 191;
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
 	        }
-	        this.state = 198;
+	        this.state = 193;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        if(_la===35) {
-	            this.state = 197;
+	            this.state = 192;
 	            this.match(SqlParser.T__34);
 	        }
 
@@ -1081,20 +1040,20 @@ export default class SqlParser extends antlr4.Parser {
 
 	options() {
 	    let localctx = new OptionsContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 52, SqlParser.RULE_options);
+	    this.enterRule(localctx, 48, SqlParser.RULE_options);
 	    var _la = 0;
 	    try {
-	        this.state = 204;
+	        this.state = 199;
 	        this._errHandler.sync(this);
 	        var la_ = this._interp.adaptivePredict(this._input,16,this._ctx);
 	        switch(la_) {
 	        case 1:
 	            this.enterOuterAlt(localctx, 1);
-	            this.state = 200;
+	            this.state = 195;
 	            this.match(SqlParser.ID);
-	            this.state = 201;
+	            this.state = 196;
 	            this.match(SqlParser.T__35);
-	            this.state = 202;
+	            this.state = 197;
 	            _la = this._input.LA(1);
 	            if(!(((((_la - 38)) & ~0x1f) === 0 && ((1 << (_la - 38)) & 11) !== 0))) {
 	            this._errHandler.recoverInline(this);
@@ -1107,7 +1066,7 @@ export default class SqlParser extends antlr4.Parser {
 
 	        case 2:
 	            this.enterOuterAlt(localctx, 2);
-	            this.state = 203;
+	            this.state = 198;
 	            this.match(SqlParser.ID);
 	            break;
 
@@ -1130,38 +1089,39 @@ export default class SqlParser extends antlr4.Parser {
 
 	keyType() {
 	    let localctx = new KeyTypeContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 54, SqlParser.RULE_keyType);
+	    this.enterRule(localctx, 50, SqlParser.RULE_keyType);
+	    var _la = 0;
 	    try {
-	        this.state = 210;
+	        this.enterOuterAlt(localctx, 1);
+	        this.state = 204;
 	        this._errHandler.sync(this);
 	        switch(this._input.LA(1)) {
 	        case 14:
 	        case 15:
-	            this.enterOuterAlt(localctx, 1);
-	            this.state = 206;
-	            this.primaryKey();
+	            this.state = 201;
+	            this.primary();
 	            break;
 	        case 16:
 	        case 17:
-	            this.enterOuterAlt(localctx, 2);
-	            this.state = 207;
-	            this.uniqueKey();
-	            break;
-	        case 18:
-	        case 19:
-	            this.enterOuterAlt(localctx, 3);
-	            this.state = 208;
-	            this.key();
+	            this.state = 202;
+	            this.unique();
 	            break;
 	        case 20:
 	        case 21:
-	            this.enterOuterAlt(localctx, 4);
-	            this.state = 209;
+	            this.state = 203;
 	            this.indexKey();
 	            break;
 	        default:
 	            throw new antlr4.error.NoViableAltException(this);
 	        }
+	        this.state = 207;
+	        this._errHandler.sync(this);
+	        _la = this._input.LA(1);
+	        if(_la===18 || _la===19) {
+	            this.state = 206;
+	            this.key();
+	        }
+
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
 		        localctx.exception = re;
@@ -1180,10 +1140,10 @@ export default class SqlParser extends antlr4.Parser {
 
 	keyName() {
 	    let localctx = new KeyNameContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 56, SqlParser.RULE_keyName);
+	    this.enterRule(localctx, 52, SqlParser.RULE_keyName);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 212;
+	        this.state = 209;
 	        this.fieldName();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -1203,59 +1163,142 @@ export default class SqlParser extends antlr4.Parser {
 
 	index() {
 	    let localctx = new IndexContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 58, SqlParser.RULE_index);
+	    this.enterRule(localctx, 54, SqlParser.RULE_index);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
 	        this.state = 214;
-	        this.keyType();
-	        this.state = 216;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
-	        if(_la===1 || _la===2 || _la===41) {
-	            this.state = 215;
-	            this.keyName();
-	        }
-
-	        this.state = 218;
-	        this.match(SqlParser.T__7);
-	        this.state = 219;
-	        this.fieldName();
-	        this.state = 224;
-	        this._errHandler.sync(this);
-	        _la = this._input.LA(1);
-	        while(_la===9) {
-	            this.state = 220;
-	            this.match(SqlParser.T__8);
-	            this.state = 221;
-	            this.fieldName();
-	            this.state = 226;
+	        while(_la===41) {
+	            this.state = 211;
+	            this.id();
+	            this.state = 216;
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
 	        }
-	        this.state = 228;
+	        this.state = 217;
+	        this.match(SqlParser.T__7);
+	        this.state = 218;
+	        this.fieldName();
+	        this.state = 223;
+	        this._errHandler.sync(this);
+	        _la = this._input.LA(1);
+	        while(_la===9) {
+	            this.state = 219;
+	            this.match(SqlParser.T__8);
+	            this.state = 220;
+	            this.fieldName();
+	            this.state = 225;
+	            this._errHandler.sync(this);
+	            _la = this._input.LA(1);
+	        }
+	        this.state = 227;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        if(_la===41) {
-	            this.state = 227;
+	            this.state = 226;
 	            this.match(SqlParser.ID);
 	        }
 
-	        this.state = 230;
+	        this.state = 229;
 	        this.match(SqlParser.T__9);
-	        this.state = 232;
+	        this.state = 231;
 	        this._errHandler.sync(this);
-	        _la = this._input.LA(1);
-	        if(_la===41) {
-	            this.state = 231;
+	        var la_ = this._interp.adaptivePredict(this._input,22,this._ctx);
+	        if(la_===1) {
+	            this.state = 230;
 	            this.id();
-	        }
 
-	        this.state = 235;
+	        }
+	        this.state = 234;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        if(_la===9) {
-	            this.state = 234;
+	            this.state = 233;
+	            this.match(SqlParser.T__8);
+	        }
+
+	    } catch (re) {
+	    	if(re instanceof antlr4.error.RecognitionException) {
+		        localctx.exception = re;
+		        this._errHandler.reportError(this, re);
+		        this._errHandler.recover(this, re);
+		    } else {
+		    	throw re;
+		    }
+	    } finally {
+	        this.exitRule();
+	    }
+	    return localctx;
+	}
+
+
+
+	other_stat() {
+	    let localctx = new Other_statContext(this, this._ctx, this.state);
+	    this.enterRule(localctx, 56, SqlParser.RULE_other_stat);
+	    var _la = 0;
+	    try {
+	        this.enterOuterAlt(localctx, 1);
+	        this.state = 240;
+	        this._errHandler.sync(this);
+	        _la = this._input.LA(1);
+	        while(((((_la - 14)) & ~0x1f) === 0 && ((1 << (_la - 14)) & 134217935) !== 0)) {
+	            this.state = 238;
+	            this._errHandler.sync(this);
+	            switch(this._input.LA(1)) {
+	            case 41:
+	                this.state = 236;
+	                this.match(SqlParser.ID);
+	                break;
+	            case 14:
+	            case 15:
+	            case 16:
+	            case 17:
+	            case 20:
+	            case 21:
+	                this.state = 237;
+	                this.keyType();
+	                break;
+	            default:
+	                throw new antlr4.error.NoViableAltException(this);
+	            }
+	            this.state = 242;
+	            this._errHandler.sync(this);
+	            _la = this._input.LA(1);
+	        }
+	        this.state = 243;
+	        this.match(SqlParser.T__7);
+	        this.state = 244;
+	        this.fieldName();
+	        this.state = 249;
+	        this._errHandler.sync(this);
+	        _la = this._input.LA(1);
+	        while(_la===9) {
+	            this.state = 245;
+	            this.match(SqlParser.T__8);
+	            this.state = 246;
+	            this.fieldName();
+	            this.state = 251;
+	            this._errHandler.sync(this);
+	            _la = this._input.LA(1);
+	        }
+	        this.state = 252;
+	        this.match(SqlParser.T__9);
+	        this.state = 254;
+	        this._errHandler.sync(this);
+	        var la_ = this._interp.adaptivePredict(this._input,27,this._ctx);
+	        if(la_===1) {
+	            this.state = 253;
+	            this.id();
+
+	        }
+	        this.state = 257;
+	        this._errHandler.sync(this);
+	        _la = this._input.LA(1);
+	        if(_la===9) {
+	            this.state = 256;
 	            this.match(SqlParser.T__8);
 	        }
 
@@ -1277,17 +1320,17 @@ export default class SqlParser extends antlr4.Parser {
 
 	init() {
 	    let localctx = new InitContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 60, SqlParser.RULE_init);
+	    this.enterRule(localctx, 58, SqlParser.RULE_init);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 240;
+	        this.state = 262;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        while(_la===26 || _la===27) {
-	            this.state = 237;
+	            this.state = 259;
 	            this.statement();
-	            this.state = 242;
+	            this.state = 264;
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
 	        }
@@ -1362,26 +1405,25 @@ SqlParser.RULE_autoIncrement = 7;
 SqlParser.RULE_primary = 8;
 SqlParser.RULE_unique = 9;
 SqlParser.RULE_key = 10;
-SqlParser.RULE_primaryKey = 11;
-SqlParser.RULE_uniqueKey = 12;
-SqlParser.RULE_indexKey = 13;
-SqlParser.RULE_defaultValue = 14;
-SqlParser.RULE_comment = 15;
-SqlParser.RULE_property = 16;
-SqlParser.RULE_fieldDefine = 17;
-SqlParser.RULE_create = 18;
-SqlParser.RULE_table = 19;
-SqlParser.RULE_iff = 20;
-SqlParser.RULE_not = 21;
-SqlParser.RULE_exists = 22;
-SqlParser.RULE_ifNotExists = 23;
-SqlParser.RULE_createTable = 24;
-SqlParser.RULE_statement = 25;
-SqlParser.RULE_options = 26;
-SqlParser.RULE_keyType = 27;
-SqlParser.RULE_keyName = 28;
-SqlParser.RULE_index = 29;
-SqlParser.RULE_init = 30;
+SqlParser.RULE_indexKey = 11;
+SqlParser.RULE_defaultValue = 12;
+SqlParser.RULE_comment = 13;
+SqlParser.RULE_property = 14;
+SqlParser.RULE_fieldDefine = 15;
+SqlParser.RULE_create = 16;
+SqlParser.RULE_table = 17;
+SqlParser.RULE_iff = 18;
+SqlParser.RULE_not = 19;
+SqlParser.RULE_exists = 20;
+SqlParser.RULE_ifNotExists = 21;
+SqlParser.RULE_createTable = 22;
+SqlParser.RULE_statement = 23;
+SqlParser.RULE_options = 24;
+SqlParser.RULE_keyType = 25;
+SqlParser.RULE_keyName = 26;
+SqlParser.RULE_index = 27;
+SqlParser.RULE_other_stat = 28;
+SqlParser.RULE_init = 29;
 
 class FieldNameContext extends antlr4.ParserRuleContext {
 
@@ -1762,84 +1804,6 @@ class KeyContext extends antlr4.ParserRuleContext {
 
 
 
-class PrimaryKeyContext extends antlr4.ParserRuleContext {
-
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = SqlParser.RULE_primaryKey;
-    }
-
-	primary() {
-	    return this.getTypedRuleContext(PrimaryContext,0);
-	};
-
-	key() {
-	    return this.getTypedRuleContext(KeyContext,0);
-	};
-
-	enterRule(listener) {
-	    if(listener instanceof SqlListener ) {
-	        listener.enterPrimaryKey(this);
-		}
-	}
-
-	exitRule(listener) {
-	    if(listener instanceof SqlListener ) {
-	        listener.exitPrimaryKey(this);
-		}
-	}
-
-
-}
-
-
-
-class UniqueKeyContext extends antlr4.ParserRuleContext {
-
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = SqlParser.RULE_uniqueKey;
-    }
-
-	unique() {
-	    return this.getTypedRuleContext(UniqueContext,0);
-	};
-
-	key() {
-	    return this.getTypedRuleContext(KeyContext,0);
-	};
-
-	enterRule(listener) {
-	    if(listener instanceof SqlListener ) {
-	        listener.enterUniqueKey(this);
-		}
-	}
-
-	exitRule(listener) {
-	    if(listener instanceof SqlListener ) {
-	        listener.exitUniqueKey(this);
-		}
-	}
-
-
-}
-
-
-
 class IndexKeyContext extends antlr4.ParserRuleContext {
 
     constructor(parser, parent, invokingState) {
@@ -1896,6 +1860,10 @@ class DefaultValueContext extends antlr4.ParserRuleContext {
 
 	Float() {
 	    return this.getToken(SqlParser.Float, 0);
+	};
+
+	ID() {
+	    return this.getToken(SqlParser.ID, 0);
 	};
 
 	enterRule(listener) {
@@ -1964,8 +1932,8 @@ class PropertyContext extends antlr4.ParserRuleContext {
         this.ruleIndex = SqlParser.RULE_property;
     }
 
-	primaryKey() {
-	    return this.getTypedRuleContext(PrimaryKeyContext,0);
+	primary() {
+	    return this.getTypedRuleContext(PrimaryContext,0);
 	};
 
 	autoIncrement() {
@@ -2358,6 +2326,17 @@ class StatementContext extends antlr4.ParserRuleContext {
 	    }
 	};
 
+	other_stat = function(i) {
+	    if(i===undefined) {
+	        i = null;
+	    }
+	    if(i===null) {
+	        return this.getTypedRuleContexts(Other_statContext);
+	    } else {
+	        return this.getTypedRuleContext(Other_statContext,i);
+	    }
+	};
+
 	options = function(i) {
 	    if(i===undefined) {
 	        i = null;
@@ -2451,20 +2430,20 @@ class KeyTypeContext extends antlr4.ParserRuleContext {
         this.ruleIndex = SqlParser.RULE_keyType;
     }
 
-	primaryKey() {
-	    return this.getTypedRuleContext(PrimaryKeyContext,0);
+	primary() {
+	    return this.getTypedRuleContext(PrimaryContext,0);
 	};
 
-	uniqueKey() {
-	    return this.getTypedRuleContext(UniqueKeyContext,0);
-	};
-
-	key() {
-	    return this.getTypedRuleContext(KeyContext,0);
+	unique() {
+	    return this.getTypedRuleContext(UniqueContext,0);
 	};
 
 	indexKey() {
 	    return this.getTypedRuleContext(IndexKeyContext,0);
+	};
+
+	key() {
+	    return this.getTypedRuleContext(KeyContext,0);
 	};
 
 	enterRule(listener) {
@@ -2533,9 +2512,62 @@ class IndexContext extends antlr4.ParserRuleContext {
         this.ruleIndex = SqlParser.RULE_index;
     }
 
-	keyType() {
-	    return this.getTypedRuleContext(KeyTypeContext,0);
+	fieldName = function(i) {
+	    if(i===undefined) {
+	        i = null;
+	    }
+	    if(i===null) {
+	        return this.getTypedRuleContexts(FieldNameContext);
+	    } else {
+	        return this.getTypedRuleContext(FieldNameContext,i);
+	    }
 	};
+
+	id = function(i) {
+	    if(i===undefined) {
+	        i = null;
+	    }
+	    if(i===null) {
+	        return this.getTypedRuleContexts(IdContext);
+	    } else {
+	        return this.getTypedRuleContext(IdContext,i);
+	    }
+	};
+
+	ID() {
+	    return this.getToken(SqlParser.ID, 0);
+	};
+
+	enterRule(listener) {
+	    if(listener instanceof SqlListener ) {
+	        listener.enterIndex(this);
+		}
+	}
+
+	exitRule(listener) {
+	    if(listener instanceof SqlListener ) {
+	        listener.exitIndex(this);
+		}
+	}
+
+
+}
+
+
+
+class Other_statContext extends antlr4.ParserRuleContext {
+
+    constructor(parser, parent, invokingState) {
+        if(parent===undefined) {
+            parent = null;
+        }
+        if(invokingState===undefined || invokingState===null) {
+            invokingState = -1;
+        }
+        super(parent, invokingState);
+        this.parser = parser;
+        this.ruleIndex = SqlParser.RULE_other_stat;
+    }
 
 	fieldName = function(i) {
 	    if(i===undefined) {
@@ -2548,12 +2580,27 @@ class IndexContext extends antlr4.ParserRuleContext {
 	    }
 	};
 
-	keyName() {
-	    return this.getTypedRuleContext(KeyNameContext,0);
+	ID = function(i) {
+		if(i===undefined) {
+			i = null;
+		}
+	    if(i===null) {
+	        return this.getTokens(SqlParser.ID);
+	    } else {
+	        return this.getToken(SqlParser.ID, i);
+	    }
 	};
 
-	ID() {
-	    return this.getToken(SqlParser.ID, 0);
+
+	keyType = function(i) {
+	    if(i===undefined) {
+	        i = null;
+	    }
+	    if(i===null) {
+	        return this.getTypedRuleContexts(KeyTypeContext);
+	    } else {
+	        return this.getTypedRuleContext(KeyTypeContext,i);
+	    }
 	};
 
 	id() {
@@ -2562,13 +2609,13 @@ class IndexContext extends antlr4.ParserRuleContext {
 
 	enterRule(listener) {
 	    if(listener instanceof SqlListener ) {
-	        listener.enterIndex(this);
+	        listener.enterOther_stat(this);
 		}
 	}
 
 	exitRule(listener) {
 	    if(listener instanceof SqlListener ) {
-	        listener.exitIndex(this);
+	        listener.exitOther_stat(this);
 		}
 	}
 
@@ -2631,8 +2678,6 @@ SqlParser.AutoIncrementContext = AutoIncrementContext;
 SqlParser.PrimaryContext = PrimaryContext; 
 SqlParser.UniqueContext = UniqueContext; 
 SqlParser.KeyContext = KeyContext; 
-SqlParser.PrimaryKeyContext = PrimaryKeyContext; 
-SqlParser.UniqueKeyContext = UniqueKeyContext; 
 SqlParser.IndexKeyContext = IndexKeyContext; 
 SqlParser.DefaultValueContext = DefaultValueContext; 
 SqlParser.CommentContext = CommentContext; 
@@ -2650,4 +2695,5 @@ SqlParser.OptionsContext = OptionsContext;
 SqlParser.KeyTypeContext = KeyTypeContext; 
 SqlParser.KeyNameContext = KeyNameContext; 
 SqlParser.IndexContext = IndexContext; 
+SqlParser.Other_statContext = Other_statContext; 
 SqlParser.InitContext = InitContext; 
