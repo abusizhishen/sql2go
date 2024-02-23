@@ -68,18 +68,19 @@ let reBuild = function () {
 
     </div>
     <div class="content">
-      <div class="left">
-        <textarea
-            id="sql"
-            @change="change"
-            @paste="change"
-            @keydown="change"
-            style="width: 100%;height: 100%;padding: 10px"
-            :placeholder="placeholderSql"
-            v-model="sql"
-        >
-        </textarea>
-      </div>
+
+        <div class="left">
+          <textarea
+              id="sql"
+              @change="change"
+              @paste="change"
+              @keydown="change"
+              style="width: 100%;height: 100%;padding: 10px"
+              :placeholder="placeholderSql"
+              v-model="sql"
+          >
+          </textarea>
+        </div>
       <div class="right" id="go">
 
         <textarea
@@ -94,6 +95,7 @@ let reBuild = function () {
 </template>
 
 <style scoped>
+
 .container {
   display: flex;
   flex-direction: column;
@@ -132,7 +134,8 @@ let reBuild = function () {
       resize: none;
       height: 100%;
       width: 100%;
-      padding: 10px
+      padding: 10px;
+      font-family: 'Courier New', Courier, monospace;
     }
   }
 }
@@ -140,6 +143,5 @@ let reBuild = function () {
 .right {
   margin-left: 10px;
 }
-
 
 </style>

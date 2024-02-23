@@ -32,19 +32,20 @@ export default class Listener extends SqlListener {
     exitStatement(ctx) {
         console.log("fieldMax: ", this.fieldLengthMax, "typeMax: ", this.typeLengthMax, "tagMax: ", this.tagLengthMax)
         this.content += this.head.join("")
+        const repeat = 3
         for (let row of this.rows) {
             for (let idx = 0; idx < row.length; idx++) {
-                console.log("idx: ", idx, "str: ", row[idx])
+                // console.log("idx: ", idx, "str: ", row[idx])
                 let str = row[idx]
                 let space = " "
                 if (idx === 0) {
-                    space = space.repeat(4)
+                    space = space.repeat(repeat)
                 } else if (idx === 1) {
-                    space = space.repeat(4 + this.fieldLengthMax - row[idx - 1].length)
+                    space = space.repeat(repeat + this.fieldLengthMax - row[idx - 1].length)
                 } else if (idx === 2) {
-                    space = space.repeat(4 + this.typeLengthMax - row[idx - 1].length)
+                    space = space.repeat(repeat + this.typeLengthMax - row[idx - 1].length)
                 } else if (idx === 3) {
-                    space = space.repeat(4 + this.tagLengthMax - row[idx - 1].length)
+                    space = space.repeat(repeat + this.tagLengthMax - row[idx - 1].length)
                 }
 
                 this.content += space + str
@@ -87,24 +88,23 @@ export default class Listener extends SqlListener {
         row.push(type)
 
         let tags = []
+        let tag_length = 0
         if (this.jsonSwitch === true) {
             let tag = 'json:"' + originFieldName + '"'
-            if (tag.length > this.tagLengthMax) {
-                this.tagLengthMax = tag.length
-            }
-
+            tag_length += tag.length
             tags.push(tag)
         }
 
-        if (this.jsonSwitch === true) {
+        if (this.gormSwitch === true) {
             let tag = 'gorm:"' + originFieldName + '"'
-            if (tag.length > this.tagLengthMax) {
-                this.tagLengthMax = tag.length
-            }
+            tag_length += tag.length
             tags.push(tag)
         }
 
         if (tags.length > 0) {
+            if (tag_length > this.tagLengthMax) {
+                this.tagLengthMax = tag_length
+            }
             row.push("`" + tags.join(" ") + "`")
         }
 
