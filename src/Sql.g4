@@ -46,12 +46,6 @@ value:
 |ID
 ;
 
-notNUll:
-    'NOT' 'NULL'
-    |'NOT' 'null'
-    |'not' 'NUll'
-    |'not' 'null'
-;
 size: '(' INT (',' INT)? ')';
 unsigned:'unsigned'|'UNSIGNED';
 typeRange: id size?;
@@ -79,8 +73,8 @@ property:
     |autoIncrement
     |unsigned
     |defaultValue
-    |notNUll
     |id
+    |not
 ;
 fieldDefine: fieldName typeRange property* comment? ','? ;
 
@@ -90,23 +84,26 @@ iff:'if' |'IF';
 not:'not'|'NOT';
 exists:'exists'|'EXISTS';
 ifNotExists: iff not exists;
+database: 'database'|'DATABASE';
 
 createTable: create table ifNotExists? (dbName=fieldName '.' ) ? tableName= fieldName ;
+createTableStatement: createTable '(' fieldDefine* indexDefine* other_stat* ')' options* ';'?;
 
+createDatabase: create database ifNotExists? dbName=fieldName options* ';'?;
+CommentLine: '--' ~[\r\n]* -> skip;
 statement:
-    createTable '('
-    fieldDefine*
-    index*
-    other_stat*
- ')' options* ';'?
+    createTableStatement
+    |createDatabase
 ;
 
 options:
 ID '=' (STRING|ID|INT)
-|ID;
+|ID
+|'default'|'DEFAULT' STRING?
+;
 
 keyType:(primary|unique|indexKey) key?;
 keyName:fieldName;
-index:keyType keyName? '(' fieldName (',' fieldName)* ID? ')' id? ','?;
+indexDefine:keyType keyName? '(' fieldName (',' fieldName)* ID? ')' id? ','?;
 other_stat: (ID|keyType)* '(' fieldName (',' fieldName)* ')' id? ','?;
 init:statement*;

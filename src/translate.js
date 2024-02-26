@@ -14,7 +14,11 @@ export default class Listener extends SqlListener {
     enterInit(ctx) {
     }
 
-    enterStatement(ctx) {
+    enterStatement(ctx){
+
+    }
+
+    enterCreateTableStatement(ctx) {
         this.fieldLengthMax = 0
         this.typeLengthMax = 0
         this.tagLengthMax = 0
@@ -29,7 +33,7 @@ export default class Listener extends SqlListener {
 
     enterTa
 
-    exitStatement(ctx) {
+    exitCreateTableStatement(ctx) {
         console.log("fieldMax: ", this.fieldLengthMax, "typeMax: ", this.typeLengthMax, "tagMax: ", this.tagLengthMax)
         this.content += this.head.join("")
         const repeat = 3

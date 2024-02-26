@@ -32,15 +32,6 @@ export default class SqlListener extends antlr4.tree.ParseTreeListener {
 	}
 
 
-	// Enter a parse tree produced by SqlParser#notNUll.
-	enterNotNUll(ctx) {
-	}
-
-	// Exit a parse tree produced by SqlParser#notNUll.
-	exitNotNUll(ctx) {
-	}
-
-
 	// Enter a parse tree produced by SqlParser#size.
 	enterSize(ctx) {
 	}
@@ -203,12 +194,39 @@ export default class SqlListener extends antlr4.tree.ParseTreeListener {
 	}
 
 
+	// Enter a parse tree produced by SqlParser#database.
+	enterDatabase(ctx) {
+	}
+
+	// Exit a parse tree produced by SqlParser#database.
+	exitDatabase(ctx) {
+	}
+
+
 	// Enter a parse tree produced by SqlParser#createTable.
 	enterCreateTable(ctx) {
 	}
 
 	// Exit a parse tree produced by SqlParser#createTable.
 	exitCreateTable(ctx) {
+	}
+
+
+	// Enter a parse tree produced by SqlParser#createTableStatement.
+	enterCreateTableStatement(ctx) {
+	}
+
+	// Exit a parse tree produced by SqlParser#createTableStatement.
+	exitCreateTableStatement(ctx) {
+	}
+
+
+	// Enter a parse tree produced by SqlParser#createDatabase.
+	enterCreateDatabase(ctx) {
+	}
+
+	// Exit a parse tree produced by SqlParser#createDatabase.
+	exitCreateDatabase(ctx) {
 	}
 
 
@@ -248,12 +266,12 @@ export default class SqlListener extends antlr4.tree.ParseTreeListener {
 	}
 
 
-	// Enter a parse tree produced by SqlParser#index.
-	enterIndex(ctx) {
+	// Enter a parse tree produced by SqlParser#indexDefine.
+	enterIndexDefine(ctx) {
 	}
 
-	// Exit a parse tree produced by SqlParser#index.
-	exitIndex(ctx) {
+	// Exit a parse tree produced by SqlParser#indexDefine.
+	exitIndexDefine(ctx) {
 	}
 
 
