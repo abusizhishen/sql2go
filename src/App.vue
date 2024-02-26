@@ -11,15 +11,7 @@ const placeholderSql = `CREATE TABLE \`stat_alarm\` (
     \`updated_at\` text NOT NULL COMMENT "数据"
 )`
 
-const placeholderGo = `type    StatAlarm    struct    {
-    Id           int       \`json: "id"\`            // 主键id
-    Name         string    \`json: "name"\`          // 国家
-    Age          string    \`json: "age"\`           // 省
-    Gender       string    \`json: "gender"\`        // 市
-    Img          string    \`json: "img"\`           // 区
-    CreatedAt    int       \`json: "created_at"\`    // 日期类型：1周2月
-    UpdatedAt    string    \`json: "updated_at"\`    // 数据
-}`
+const placeholderGo = computed(() => parser(placeholderSql, jsonSwitch.value, commentSwitch.value, gormSwitch.value))
 
 const sql = ref("");
 const lastSql = ref("");
@@ -39,7 +31,7 @@ let change = function () {
   lastSql.value = sql.value
 }
 
-import {ref} from "vue";
+import {computed,ref} from "vue";
 
 const goStruct = ref('')
 const jsonSwitch = ref(true)
